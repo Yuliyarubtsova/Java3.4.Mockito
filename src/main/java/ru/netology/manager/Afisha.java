@@ -2,15 +2,15 @@ package ru.netology.manager;
 
 import ru.netology.domain.PurchaseItem;
 
-public class CartManager {
+public class Afisha {
     private PurchaseItem[] items = new PurchaseItem[0];
     private int moviesLength = 10;
 
-    public CartManager(int moviesLength) {
+    public Afisha(int moviesLength) {
         this.moviesLength = moviesLength;
     }
 
-    public CartManager() {
+    public Afisha() {
     }
 
     public void add(PurchaseItem item) {
