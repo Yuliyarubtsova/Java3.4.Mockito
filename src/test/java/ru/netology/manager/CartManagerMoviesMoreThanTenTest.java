@@ -3,11 +3,11 @@ package ru.netology.manager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.PurchaseItem;
-import ru.netology.manager.CartManager;
+
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class CartManagerTestMoviesTen {
+public class CartManagerMoviesMoreThanTenTest {
     private CartManager manager = new CartManager();
     private PurchaseItem first = new PurchaseItem(1, 1, "Номер один","Комедия");
     private PurchaseItem second = new PurchaseItem(2, 2, "Тролли. Мировой тур", "Мультфильм");
@@ -19,6 +19,7 @@ public class CartManagerTestMoviesTen {
     private PurchaseItem eighth  = new PurchaseItem(8, 8, "eighth", "eighth");
     private PurchaseItem ninth  = new PurchaseItem(9, 9, "ninth", "ninth");
     private PurchaseItem tenth = new PurchaseItem(10, 10, "tenth", "tenth");
+    private PurchaseItem eleventh = new PurchaseItem(11, 11, "eleventh", "eleventh");
 
 
     @BeforeEach
@@ -33,15 +34,15 @@ public class CartManagerTestMoviesTen {
         manager.add(eighth);
         manager.add(ninth);
         manager.add(tenth);
+        manager.add(eleventh);
     }
 
     @Test
     public void shouldMoviesAll() {
 
         PurchaseItem[] actual = manager.getAll();
-        PurchaseItem[] expected = new PurchaseItem[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        PurchaseItem[] expected = new PurchaseItem[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
 
         assertArrayEquals(expected, actual);
     }
-
 }

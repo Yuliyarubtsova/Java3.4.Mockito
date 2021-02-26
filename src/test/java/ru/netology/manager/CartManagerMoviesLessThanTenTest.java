@@ -3,11 +3,10 @@ package ru.netology.manager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.PurchaseItem;
-import ru.netology.manager.CartManager;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class CartManagerTestMoviesLessThanTen {
+public class CartManagerMoviesLessThanTenTest {
     private CartManager manager = new CartManager();
     private PurchaseItem first = new PurchaseItem(1, 1, "Номер один","Комедия");
     private PurchaseItem second = new PurchaseItem(2, 2, "Тролли. Мировой тур", "Мультфильм");
