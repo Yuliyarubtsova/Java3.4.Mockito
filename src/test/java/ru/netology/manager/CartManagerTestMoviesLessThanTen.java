@@ -8,7 +8,7 @@ import ru.netology.manager.CartManager;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class CartManagerTestMoviesLessThanTen {
-    private CartManager manager = new CartManager(10);
+    private CartManager manager = new CartManager();
     private PurchaseItem first = new PurchaseItem(1, 1, "Номер один","Комедия");
     private PurchaseItem second = new PurchaseItem(2, 2, "Тролли. Мировой тур", "Мультфильм");
     private PurchaseItem third = new PurchaseItem(3, 3, "Человек-невидимка", "Ужасы");
