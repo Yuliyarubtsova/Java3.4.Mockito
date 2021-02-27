@@ -2,24 +2,24 @@ package ru.netology.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.domain.PurchaseItem;
+import ru.netology.domain.MovieItem;
 
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class AfishaMoviesMoreThanTenTest {
     private Afisha manager = new Afisha();
-    private PurchaseItem first = new PurchaseItem(1, 1, "Номер один", "Комедия");
-    private PurchaseItem second = new PurchaseItem(2, 2, "Тролли. Мировой тур", "Мультфильм");
-    private PurchaseItem third = new PurchaseItem(3, 3, "Человек-невидимка", "Ужасы");
-    private PurchaseItem fourth = new PurchaseItem(4, 4, "Джентльмены", "Боевик");
-    private PurchaseItem fifth = new PurchaseItem(5, 5, "Отель Белград", "Комедия");
-    private PurchaseItem sixth = new PurchaseItem(6, 6, "Вперед", "Мультфильм");
-    private PurchaseItem seventh = new PurchaseItem(7, 7, "Бладшот", "Боевик");
-    private PurchaseItem eighth = new PurchaseItem(8, 8, "eighth", "eighth");
-    private PurchaseItem ninth = new PurchaseItem(9, 9, "ninth", "ninth");
-    private PurchaseItem tenth = new PurchaseItem(10, 10, "tenth", "tenth");
-    private PurchaseItem eleventh = new PurchaseItem(11, 11, "eleventh", "eleventh");
+    private MovieItem first = new MovieItem(1, 1, "Номер один", "Комедия");
+    private MovieItem second = new MovieItem(2, 2, "Тролли. Мировой тур", "Мультфильм");
+    private MovieItem third = new MovieItem(3, 3, "Человек-невидимка", "Ужасы");
+    private MovieItem fourth = new MovieItem(4, 4, "Джентльмены", "Боевик");
+    private MovieItem fifth = new MovieItem(5, 5, "Отель Белград", "Комедия");
+    private MovieItem sixth = new MovieItem(6, 6, "Вперед", "Мультфильм");
+    private MovieItem seventh = new MovieItem(7, 7, "Бладшот", "Боевик");
+    private MovieItem eighth = new MovieItem(8, 8, "eighth", "eighth");
+    private MovieItem ninth = new MovieItem(9, 9, "ninth", "ninth");
+    private MovieItem tenth = new MovieItem(10, 10, "tenth", "tenth");
+    private MovieItem eleventh = new MovieItem(11, 11, "eleventh", "eleventh");
 
 
     @BeforeEach
@@ -40,8 +40,8 @@ public class AfishaMoviesMoreThanTenTest {
     @Test
     public void shouldMoviesAll() {
 
-        PurchaseItem[] actual = manager.getAll();
-        PurchaseItem[] expected = new PurchaseItem[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
+        MovieItem[] actual = manager.getAll();
+        MovieItem[] expected = new MovieItem[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
 
         assertArrayEquals(expected, actual);
     }

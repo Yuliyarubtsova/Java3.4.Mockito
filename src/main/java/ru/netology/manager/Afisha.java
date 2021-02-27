@@ -1,9 +1,9 @@
 package ru.netology.manager;
 
-import ru.netology.domain.PurchaseItem;
+import ru.netology.domain.MovieItem;
 
 public class Afisha {
-    private PurchaseItem[] items = new PurchaseItem[0];
+    private MovieItem[] items = new MovieItem[0];
     private int moviesLength = 10;
 
     public Afisha(int moviesLength) {
@@ -13,18 +13,18 @@ public class Afisha {
     public Afisha() {
     }
 
-    public void add(PurchaseItem item) {
+    public void add(MovieItem item) {
         int length = items.length + 1;
-        PurchaseItem[] tmp = new PurchaseItem[length];
+        MovieItem[] tmp = new MovieItem[length];
         System.arraycopy(items, 0, tmp, 0, items.length);
         int lastIndex = tmp.length - 1;
         tmp[lastIndex] = item;
         items = tmp;
     }
 
-    public PurchaseItem[] getAll() {
+    public MovieItem[] getAll() {
         if (items.length <= moviesLength) {
-            PurchaseItem[] result = new PurchaseItem[items.length];
+            MovieItem[] result = new MovieItem[items.length];
 
             for (int i = 0; i < items.length; i++) {
                 int index = items.length - i - 1;
@@ -32,7 +32,7 @@ public class Afisha {
             }
             return result;
         } else {
-            PurchaseItem[] result = new PurchaseItem[moviesLength];
+            MovieItem[] result = new MovieItem[moviesLength];
             for (int i = 0; i < moviesLength; i++) {
                 int index = items.length - i - 1;
                 result[i] = items[index];

@@ -2,19 +2,19 @@ package ru.netology.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.domain.PurchaseItem;
+import ru.netology.domain.MovieItem;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class AfishaMoviesLessThanTenTest {
     private Afisha manager = new Afisha();
-    private PurchaseItem first = new PurchaseItem(1, 1, "Номер один", "Комедия");
-    private PurchaseItem second = new PurchaseItem(2, 2, "Тролли. Мировой тур", "Мультфильм");
-    private PurchaseItem third = new PurchaseItem(3, 3, "Человек-невидимка", "Ужасы");
-    private PurchaseItem fourth = new PurchaseItem(4, 4, "Джентльмены", "Боевик");
-    private PurchaseItem fifth = new PurchaseItem(5, 5, "Отель Белград", "Комедия");
-    private PurchaseItem sixth = new PurchaseItem(6, 6, "Вперед", "Мультфильм");
-    private PurchaseItem seventh = new PurchaseItem(7, 7, "Бладшот", "Боевик");
+    private MovieItem first = new MovieItem(1, 1, "Номер один", "Комедия");
+    private MovieItem second = new MovieItem(2, 2, "Тролли. Мировой тур", "Мультфильм");
+    private MovieItem third = new MovieItem(3, 3, "Человек-невидимка", "Ужасы");
+    private MovieItem fourth = new MovieItem(4, 4, "Джентльмены", "Боевик");
+    private MovieItem fifth = new MovieItem(5, 5, "Отель Белград", "Комедия");
+    private MovieItem sixth = new MovieItem(6, 6, "Вперед", "Мультфильм");
+    private MovieItem seventh = new MovieItem(7, 7, "Бладшот", "Боевик");
 
     @BeforeEach
     public void setUp() {
@@ -30,8 +30,8 @@ public class AfishaMoviesLessThanTenTest {
     @Test
     public void shouldMoviesAll() {
 
-        PurchaseItem[] actual = manager.getAll();
-        PurchaseItem[] expected = new PurchaseItem[]{seventh, sixth, fifth, fourth, third, second, first};
+        MovieItem[] actual = manager.getAll();
+        MovieItem[] expected = new MovieItem[]{seventh, sixth, fifth, fourth, third, second, first};
 
         assertArrayEquals(expected, actual);
     }
